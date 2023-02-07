@@ -17,7 +17,7 @@ class User(SqlAlchemyBase, UserMixin, SerializerMixin):
                                      default=datetime.datetime.now)
 
     is_developer = sqlalchemy.Column(sqlalchemy.Boolean, nullable=True, default=False)
-    vallutes = sqlalchemy.Column(sqlalchemy.String, nullable=True, default='')
+    valutes = sqlalchemy.Column(sqlalchemy.String, nullable=True, default='')
 
     def set_password(self, password):
         self.hashed_password = generate_password_hash(password)
