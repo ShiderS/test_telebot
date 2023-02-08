@@ -1,4 +1,3 @@
-import aiogram
 import requests
 from data.user import User
 from data import db_session
@@ -8,12 +7,10 @@ import logging
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import Message
 
-# создаем бота в BotFather и копируем токен
 token = '6050553629:AAGFy-_9u2F5oVjHO0IQtUAejdPbylxfNPY'
 bot = Bot(token)
 dp = Dispatcher(bot)
 
-# подключаемся к API
 VALUTES = requests.get('https://www.cbr-xml-daily.ru/daily_json.js').json()
 
 buttons_currencies = []
